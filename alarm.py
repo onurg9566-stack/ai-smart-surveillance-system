@@ -1,9 +1,23 @@
-import pygame
+# =====================================================
+# ALARM SYSTEM
+# =====================================================
+#
+# Amaç:
+# Hareket veya insan algılanınca sesli uyarı vermek
+#
+# =====================================================
 
-class Alarm:
+import winsound  # Windows için ses
+
+class AlarmSystem:
+
     def __init__(self):
-        pygame.mixer.init()
-        self.sound = pygame.mixer.Sound("alarm.wav")
+
+        print("Alarm sistemi aktif.")
 
     def trigger(self):
-        self.sound.play()
+
+        # beep sesi
+        winsound.Beep(1000, 500)
+
+        print("!!! ALARM: ŞÜPHELİ DURUM ALGILANDI !!!")
